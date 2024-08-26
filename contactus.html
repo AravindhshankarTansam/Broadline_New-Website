@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Broadline | Contact-Us</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('W0dYXBvbhG6nupPPO'); //EmailJS  Public API or Pravite API
+        })();
+    </script>
+</head>
+<body>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                <nav class="main-nav">
+                  <!-- ***** Logo Start ***** -->
+                  <a href="index.html" class="logo">
+                      <img src="./assets/images/Broadlinenew.png" alt="Broadline" height="80px" width="70px">
+                  </a>
+                  <!-- ***** Logo End ***** -->
+                  <!-- ***** Menu Start ***** -->
+                  <ul class="nav">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="about-us.html">About Us</a></li>
+                      <li class="scroll-to-section"><a href="#services">Services</a></li>
+                      <li><a href="erppractices.html">ERP Practices</a></li>
+                      <li><a href="careers.html">Careers</a></li>
+                      <li><a href="contactus.html" class="active">Contact Us</a></li>
+                  </ul>        
+                  <a class='menu-trigger'>
+                      <span>Menu</span>
+                  </a>
+                  <!-- ***** Menu End ***** -->
+              </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  
+  <!-- ***** Contact Us Section Start ***** -->
+  <section class="contact-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.216878993569!2d80.2456133153202!3d13.052413890805775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266df1dbf3e17%3A0xb5c9b0a2a665f853!2s7%2C%202nd%20Floor%2C%20Khader%20Nawaz%20Khan%20Rd%2C%20Thousand%20Lights%20West%2C%20Nungambakkam%2C%20Chennai%2C%20Poombukar%20Nagar%2C%20Tamil%20Nadu%20600006!5e0!3m2!1sen!2sin!4v1644335269264!5m2!1sen!2sin&z=16&marker=true&markers=color:red%7Clabel:C%7C13.052413890805775,80.2456133153202" width="100%" height="420px" frameborder="0" style="border:0; border-radius: 15px; position: relative; z-index: 2;" allowfullscreen=""></iframe>
+            <div class="row">
+              <div class="col-lg-4 offset-lg-1">
+                <div class="contact-info">
+                  <div class="icon">
+                    <i class="fa fa-phone"></i>
+                  </div>
+                  <h4>Phone</h4>
+                  <span>044-28333083</span>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="contact-info">
+                  <div class="icon">
+                    <i class="fa fa-phone"></i>
+                  </div>
+                  <h4>Mobile</h4>
+                  <span>9884398707</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <form id="contact" onsubmit="sendEmail(event)">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h6>Let's Connect</h6>
+                  <h4>Ready to <em>Contact us</em></h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, deleniti?</p>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="text" name="from_name" id="name" placeholder="Full Name" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="email" name="reply_to" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="main-gradient-button">Send Message</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Footer -->
+  <footer class="footer-bottom">
+    <div class="footer-content">
+      &copy; 2024 BROADLINE. All Rights Reserved.
+    </div>
+    <div class="lastline12">
+      <ul>
+        <li><a href="#">Terms & Condition</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- EmailJS Script -->
+  <script type="text/javascript">
+    function sendEmail(event) {
+      event.preventDefault(); // Prevent the default form submission
+  
+      emailjs.sendForm('service_xr02dkg', 'template_unqxhjs', event.target) //  EmailJS(Email Services), (Email Templates) 
+        .then(function() {
+          alert('Message sent successfully!');
+          event.target.reset(); // Clear the form fields
+        }, function(error) {
+          alert('Failed to send the message. Please try again later.');
+        });
+    }
+  </script>
+  
+  
+</body>
+</html>
